@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native';
+import {Button} from 'react-native-ios-kit'
 import React from 'react'
 import DocumentPicker from 'react-native-document-picker';
 
@@ -34,13 +35,22 @@ export default function App() {
   }
 
   return (
-    <View>
-      <Button
-        title='Upload File'
-        onPress={()=> onDocumentPress()}
-      />
+    <View style={styles.container}>
+      <Button rounded inverted onPress={()=> onDocumentPress() }>
+        Upload Document
+      </Button>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: "center" },
+  input: { marginVertical: 5, borderRadius: 0, backgroundColor: 'white', height: 50, borderBottomColor: 'white' },
+  row: {
+    alignItems: "center",
+    flexDirection: "row",
+    marginVertical: 20,
+    justifyContent: "space-between",
+  },
+  textContainer: { alignContent: 'center', alignItems: 'center' }
+});
