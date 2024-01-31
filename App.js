@@ -39,6 +39,8 @@ export default function App() {
       <Button rounded inverted onPress={()=> onDocumentPress() }>
         Upload Document
       </Button>
+
+      <Text>  Selected Document </Text>
     </View>
   )
 }
